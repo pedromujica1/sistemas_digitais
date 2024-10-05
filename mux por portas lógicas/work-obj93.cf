@@ -1,0 +1,7 @@
+v 4
+file . "mux2x4_bonito.vhdl" "0c2ca3a617430042f2157577291e8c7c77207dfd" "20240911170743.789":
+  entity mux2x4_bonito at 1( 0) + 0 on 15;
+  architecture comuta of mux2x4_bonito at 10( 202) + 0 on 16;
+file . "tb_mux2x4_bonito.vhdl" "baf04435c16959669c2d0fcb40911271405b46ee" "20240911170743.790":
+  entity tb_mux2x4_bonito at 4( 126) + 0 on 17;
+  architecture comuta of tb_mux2x4_bonito at 8( 167) + 0 on 18;

@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue Mar 19 13:13:04 2019
+[*]
+[dumpfile] "/home/bellorini/Unioeste/2017/SD/GHDL/ghdl-0.33-instalacao/teste/tb_porta_2in.ghw"
+[dumpfile_mtime] "Tue Mar 19 13:11:53 2019"
+[dumpfile_size] 416
+[savefile] "/home/bellorini/Unioeste/2017/SD/GHDL/ghdl-0.33-instalacao/teste/solConfig.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-23.496473 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_porta_2in.
+[sst_width] 196
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@28
+top.tb_porta_2in.u_porta_ou_2in.a
+top.tb_porta_2in.u_porta_ou_2in.b
+@29
+top.tb_porta_2in.u_porta_ou_2in.s
+[pattern_trace] 1
+[pattern_trace] 0
