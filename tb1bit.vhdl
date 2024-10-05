@@ -36,5 +36,5 @@ begin
    	wait for 20 ns;
 
    wait;
-	end process;
+    end process;
 end architecture test;

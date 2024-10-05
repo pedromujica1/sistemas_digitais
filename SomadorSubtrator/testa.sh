@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-ghdl --clean
+
 ghdl -a not8bits.vhdl    # Compilar a entidade not8bits
 ghdl -a tb_not8bits.vhdl  # Compilar o testbench
 
