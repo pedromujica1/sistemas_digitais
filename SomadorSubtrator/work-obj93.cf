@@ -1,7 +1,13 @@
 v 4
+file . "tb_mux2x8.vhdl" "5f00185a2ed4b926ddd0f768d4aff3079c51377e" "20241005195000.261":
+  entity tb_mux2x8 at 1( 0) + 0 on 42;
+  architecture comutacao of tb_mux2x8 at 3( 33) + 0 on 43;
 file . "tb_not8bits.vhdl" "fdf6d570c6ba24e8dcea69492a099ee5175a5234" "20241005151149.445":
   entity tb_not8bits at 1( 0) + 0 on 38;
   architecture negacao of tb_not8bits at 4( 35) + 0 on 39;
 file . "not8bits.vhdl" "a8f3dc0247a27c49b7c8917fe5a38af9400d5130" "20241005151050.807":
   entity not8bits at 2( 1) + 0 on 36;
   architecture negacao8bits of not8bits at 9( 133) + 0 on 37;
+file . "mux2x8.vhdl" "d2060600c0d70439efe9b672075cb9c48b142b00" "20241005194953.746":
+  entity mux2x8 at 2( 1) + 0 on 40;
+  architecture comutacao of mux2x8 at 13( 274) + 0 on 41;
