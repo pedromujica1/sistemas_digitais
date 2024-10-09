@@ -2,18 +2,21 @@ v 4
 file . "tb_somadorCompleto.vhdl" "0c67a230f8bb87502d636f8522d992035b314f16" "20241005212455.293":
   entity tb_somadorcompleto at 1( 0) + 0 on 50;
   architecture soma of tb_somadorcompleto at 8( 87) + 0 on 51;
-file . "tb_mux2x8.vhdl" "5f00185a2ed4b926ddd0f768d4aff3079c51377e" "20241005195000.261":
-  entity tb_mux2x8 at 1( 0) + 0 on 42;
-  architecture comutacao of tb_mux2x8 at 3( 33) + 0 on 43;
-file . "tb_not8bits.vhdl" "fdf6d570c6ba24e8dcea69492a099ee5175a5234" "20241005151149.445":
-  entity tb_not8bits at 1( 0) + 0 on 38;
-  architecture negacao of tb_not8bits at 4( 35) + 0 on 39;
-file . "not8bits.vhdl" "a8f3dc0247a27c49b7c8917fe5a38af9400d5130" "20241005151050.807":
-  entity not8bits at 2( 1) + 0 on 36;
-  architecture negacao8bits of not8bits at 9( 133) + 0 on 37;
-file . "mux2x8.vhdl" "d2060600c0d70439efe9b672075cb9c48b142b00" "20241005194953.746":
-  entity mux2x8 at 2( 1) + 0 on 40;
-  architecture comutacao of mux2x8 at 13( 274) + 0 on 41;
+file . "tb_mux2x8.vhdl" "c468d01c008e0617e190d4215aa5be6419c4f1b2" "20241009180705.789":
+  entity tb_mux2x8 at 1( 0) + 0 on 106;
+  architecture comutacao of tb_mux2x8 at 6( 77) + 0 on 107;
+file . "tb_not8bits.vhdl" "29a70790af3ca1360b1ef8e8020f847ce4d957de" "20241009173716.924":
+  entity tb_not8bits at 1( 0) + 0 on 100;
+  architecture negacao of tb_not8bits at 7( 79) + 0 on 101;
+file . "not8bits.vhdl" "e4ff06c914450b804c8d1e433db68ae829d80a7e" "20241009173708.496":
+  entity not8bits at 1( 0) + 0 on 98;
+  architecture negacao8bits of not8bits at 11( 188) + 0 on 99;
+file . "mux2x8.vhdl" "800fe2708d8197e2506516ddcb8ea7d6cf40e9c0" "20241009180359.355":
+  entity mux2x8 at 1( 0) + 0 on 104;
+  architecture comutacao of mux2x8 at 16( 371) + 0 on 105;
 file . "somadorCompleto.vhdl" "e54cbb41a5f06fc57b81ec8f7f24b11af896134b" "20241005212415.096":
   entity somadorcompleto at 1( 0) + 0 on 44;
   architecture soma of somadorcompleto at 10( 163) + 0 on 45;
+file . "somador8bits.vhdl" "a0ec035f21d05842a0a95be4ec7dac2dda3ae645" "20241009151252.271":
+  entity somador8bits at 1( 0) + 0 on 88;
+  architecture comportamento of somador8bits at 16( 320) + 0 on 89;
