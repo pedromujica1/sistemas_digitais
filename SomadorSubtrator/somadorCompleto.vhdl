@@ -10,6 +10,5 @@ end entity somadorCompleto;
 architecture soma of somadorCompleto is
     begin
         s <= x xor y xor Cin;
-        cout <= (x and y) or (cin and x) or (cin and y)
-        after 4ns;
+        cout <= (x and y) or (cin and x) or (cin and y);
 end soma;

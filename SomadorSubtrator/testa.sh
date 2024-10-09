@@ -13,4 +13,6 @@ ghdl -r tb_not8bits --stop-time=80ns --wave=tb_not8bits.ghw
 
 ghdl -r tb_mux2x8 --stop-time=80ns --wave=tb_not8bits.ghw
 
+ghdl -r tb_somador8bits --stop-time=80ns --wave=tb_somador8bits.ghw
+
 

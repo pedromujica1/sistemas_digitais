@@ -1,5 +1,5 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity tb_mux2x8 is 
 end entity;
@@ -31,7 +31,7 @@ begin
     );
     u_tb: process
     begin
-        Scanal0 <= "00000011";
+        Scanal0 <= "00001111";
         Sseletor <= '0';
         wait for 10 ns;
         Sseletor <= '1';
