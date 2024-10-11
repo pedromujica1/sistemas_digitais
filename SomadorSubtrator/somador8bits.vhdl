@@ -1,14 +1,15 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
---OVERFLOW XOR DO CARRY_IN E CARRY_OUT
-
 entity somador8bits is
-    port(x : in std_logic_vector (7 downto 0);
+    port(
+        --Entradas e saídas do Somador
+        x : in std_logic_vector (7 downto 0);
         y : in std_logic_vector (7 downto 0);
         op : in std_logic; --Representa o Cin do Somador
         s : out std_logic_vector (7 downto 0); --Saída
-        Cout_geral : out std_logic
+        Cout_geral : out std_logic;
+        overflow: out std_logic
     );
 end entity;
 
@@ -38,8 +39,9 @@ architecture comportamento of somador8bits is
     signal s_canal1 : std_logic_vector(7 downto 0);
 
    --SINAIS SOMADOR 8 BITS
-    signal carry : std_logic;  -- Carry inicial
-    signal s_carry : std_logic_vector (6 downto 0);
+    signal s_carry : std_logic_vector (7 downto 0);
+    signal s_overflow : std_logic;
+    signal s_overflow2comp : std_logic;
     
     begin
         --Retorna Y negado ou Y dependendo do sinal op
@@ -52,7 +54,17 @@ architecture comportamento of somador8bits is
         u_somador4: somadorCompleto port map (x(4), s_mux_out(4), s_carry(3), s(4), s_carry(4));
         u_somador5: somadorCompleto port map (x(5), s_mux_out(5), s_carry(4), s(5), s_carry(5));
         u_somador6: somadorCompleto port map (x(6), s_mux_out(6), s_carry(5), s(6), s_carry(6));
-        u_somador7: somadorCompleto port map (x(7), s_mux_out(7), s_carry(6), s(7), Cout_geral);
+        u_somador7: somadorCompleto port map (x(7), s_mux_out(7), s_carry(6), s(7), s_carry(7));
+        --s_overflow recebe o Cout_geral
+        s_overflow <= s_carry(7);
+        Cout_geral <= s_carry(7);
+
+        --Quando foi complemento de dois é realizado o xor entre Cin e Cout
+        s_overflow2comp <= s_carry(6) xor s_carry(7) after 4 ns;
+
+        --Caso for Soma o sinal do cout_geral é passado para o overflow
+        --Caso seja Subtração o overflow é o XOR entre o Cout da ultima soma e o cout_geral
+        overflow <= s_overflow when op = '0' else s_overflow2comp;
 end architecture;
 
 

@@ -4,10 +4,9 @@ use ieee.std_logic_1164.all;
 entity mux2x8 is
     port (
         --Canais de 8 MUX 2x1 
-        canal0: in std_logic_vector(7 downto 0);
+        canal0: in std_logic_vector(7 downto 0); --Entra o Y
         seletor: in std_logic;
-        --Saída de Y negado
-        canal1: out std_logic_vector(7 downto 0);
+        canal1: out std_logic_vector(7 downto 0); --Saída do componente not8bits = ~Y 
         --1 saída Z para 8 MUX2x1
         Zc : out std_logic_vector(7 downto 0)
     ); 
@@ -28,15 +27,8 @@ architecture comutacao of mux2x8 is
         u_not8bits : not8bits port map(canal0,s_notY);
         canal1 <= s_notY;
 
-        process (canal0,seletor,s_notY)
-        begin
-            if seletor = '0' then
-                Zc <=canal0;
-            else
-                Zc <=s_notY; 
-            end if;
-            --Zc <= canal0 when seletor = '0' else s_notY;
-        end process;
-        --Definindo o comoportamento do MUX2X8
-        --Zc <= canal0 when seletor = '0' else s_notY;
+        --Definindo comportamento do MUX
+        --Quando SELECT = 0 comutar canal 0
+        --Quando SELECT = 1 comutar canal 1
+        Zc <= canal0 when seletor = '0' else s_notY;
 end architecture;

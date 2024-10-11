@@ -10,7 +10,8 @@ architecture comportamento of tb_somador8bits is
             y : in std_logic_vector (7 downto 0);
             op : in std_logic; 
             s : out std_logic_vector (7 downto 0);
-            Cout_geral : out std_logic
+            Cout_geral : out std_logic;
+            overflow: out std_logic 
         );
             
     end component;
@@ -20,50 +21,47 @@ architecture comportamento of tb_somador8bits is
     signal Cin_geral : std_logic;
     signal s_saida:  std_logic_vector (7 downto 0);
     signal Cout_geral :  std_logic;
+    signal s_overflow : std_logic;
 
     begin
-        u_somador8bits : somador8bits port map (s_x,s_y,Cin_geral,s_saida,Cout_geral);
+        u_somador8bits : somador8bits port map (s_x,s_y,Cin_geral,s_saida,Cout_geral,s_overflow);
         u_tb : process
         begin
-            
-            -- Caso 3: 0xFF + 0x01
-            -- Caso 4: 0xFF - 0x01
-            -- Caso 5: 0xFE + 0xFE
-            -- Caso 6: 0xFF + 0xFF
-
             --Caso 1: 0x00 + 0xFF
             s_x <= "00000000";
             s_y <= "11111111";
             Cin_geral <= '0';
             wait for 10 ns;
-            --Caso 2: 0x00 - 0xFF 
+            --Caso 2: 0x00 - 0xFF
+            s_x <= "00000000";
+            s_y <= "11111111"; 
             Cin_geral <= '1';
             wait for 10 ns;
-            --Caso 3: 0xFF - 0x01 
+            --Caso 3: 0xFF + 0x01 (OVERFLOW)
             s_x <= "11111111";
             s_y <= "00000001";
             Cin_geral <= '0';
             wait for 10 ns;
             --Caso 4: 0xFF – 0x01
+            s_x <= "11111111";
+            s_y <= "00000001";
             Cin_geral <= '1';
             wait for 10 ns;
-            --Caso 5: 0xFE + 0xFE
+            --Caso 5: 0xFE + 0xFE (OVERFLOW)
             s_x <= "11111110";
             s_y <= "11111110";
             Cin_geral <= '0';
             wait for 10 ns;
-            --Caso 6: 0xFF + 0xFF
+            --Caso 6: 0xFF + 0xFF (OVERFLOW)
             s_x <= "11111111";
             s_y <= "11111111";
             Cin_geral <= '0';
             wait for 10 ns;
-            --Caso 7
+            --Caso 7: Intermetdiário (OVERFLOW)
             s_x <= "00000111";
             s_y <= "11111111";
             Cin_geral <= '0';
-            wait for 10 ns;
-            
-        
+            wait for 10 ns;        
             wait;
         end process;
     end architecture;

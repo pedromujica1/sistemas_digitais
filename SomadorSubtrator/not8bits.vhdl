@@ -12,9 +12,8 @@ architecture negacao8bits of not8bits is
     begin
         process(y)
         begin
-            --Definindo negação dos bits
+            --Definindo negação dos  8 bits
             not_y <= not y;
-            
         
         end process;
     end architecture;
