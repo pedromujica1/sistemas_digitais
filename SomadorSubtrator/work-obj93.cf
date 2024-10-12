@@ -1,25 +1,25 @@
 v 4
-file . "somador8bits.vhdl" "85577396760443ee7ecd4d9d29977747017e8ae8" "20241012175841.891":
-  entity somador8bits at 1( 0) + 0 on 804;
-  architecture comportamento of somador8bits at 16( 410) + 0 on 805;
-file . "somadorCompleto.vhdl" "e536b8c32ae529f920cdbb8bf5c3b25326bd6cbd" "20241012175841.881":
-  entity somadorcompleto at 1( 0) + 0 on 800;
-  architecture soma of somadorcompleto at 10( 163) + 0 on 801;
-file . "mux2x8.vhdl" "a69ea8cb2c9933f0343694c83676e588a8e7f177" "20241012175841.870":
-  entity mux2x8 at 1( 0) + 0 on 796;
-  architecture comutacao of mux2x8 at 15( 392) + 0 on 797;
-file . "not8bits.vhdl" "6045870944b6b1ee442bfbc8289782f389988c50" "20241012175841.854":
-  entity not8bits at 1( 0) + 0 on 792;
-  architecture negacao8bits of not8bits at 11( 188) + 0 on 793;
-file . "tb_not8bits.vhdl" "c250f4d256beaba628181bb12d0aad1eadbf523d" "20241012175841.863":
-  entity tb_not8bits at 1( 0) + 0 on 794;
-  architecture negacao of tb_not8bits at 7( 79) + 0 on 795;
-file . "tb_mux2x8.vhdl" "7aca532b0ab35402bc256cb465015df6e5e7180e" "20241012175841.876":
-  entity tb_mux2x8 at 1( 0) + 0 on 798;
-  architecture comutacao of tb_mux2x8 at 6( 77) + 0 on 799;
-file . "tb_somadorCompleto.vhdl" "0c67a230f8bb87502d636f8522d992035b314f16" "20241012175841.886":
-  entity tb_somadorcompleto at 1( 0) + 0 on 802;
-  architecture soma of tb_somadorcompleto at 8( 87) + 0 on 803;
-file . "tb_somador8bits.vhdl" "01f0bc9087a83562863c223807f757350e3d3585" "20241012175841.898":
-  entity tb_somador8bits at 1( 0) + 0 on 806;
-  architecture comportamento of tb_somador8bits at 7( 84) + 0 on 807;
+file . "somador8bits.vhdl" "15b0df9950f446e3dad0783b14ffec19ded59cbf" "20241012183522.233":
+  entity somador8bits at 1( 0) + 0 on 916;
+  architecture comportamento of somador8bits at 16( 410) + 0 on 917;
+file . "somadorCompleto.vhdl" "456eb9dbc3550d352738de7d6ad5ebdc2cbcd96e" "20241012183522.223":
+  entity somadorcompleto at 1( 0) + 0 on 912;
+  architecture soma of somadorcompleto at 10( 163) + 0 on 913;
+file . "mux2x8.vhdl" "a69ea8cb2c9933f0343694c83676e588a8e7f177" "20241012183522.211":
+  entity mux2x8 at 1( 0) + 0 on 908;
+  architecture comutacao of mux2x8 at 15( 392) + 0 on 909;
+file . "not8bits.vhdl" "efa6d88cff7a2f0bfc15414c317198eff7855ee4" "20241012183522.199":
+  entity not8bits at 1( 0) + 0 on 904;
+  architecture negacao8bits of not8bits at 11( 188) + 0 on 905;
+file . "tb_not8bits.vhdl" "c250f4d256beaba628181bb12d0aad1eadbf523d" "20241012183522.205":
+  entity tb_not8bits at 1( 0) + 0 on 906;
+  architecture negacao of tb_not8bits at 7( 79) + 0 on 907;
+file . "tb_mux2x8.vhdl" "7aca532b0ab35402bc256cb465015df6e5e7180e" "20241012183522.217":
+  entity tb_mux2x8 at 1( 0) + 0 on 910;
+  architecture comutacao of tb_mux2x8 at 6( 77) + 0 on 911;
+file . "tb_somadorCompleto.vhdl" "0c67a230f8bb87502d636f8522d992035b314f16" "20241012183522.228":
+  entity tb_somadorcompleto at 1( 0) + 0 on 914;
+  architecture soma of tb_somadorcompleto at 8( 87) + 0 on 915;
+file . "tb_somador8bits.vhdl" "01f0bc9087a83562863c223807f757350e3d3585" "20241012183522.239":
+  entity tb_somador8bits at 1( 0) + 0 on 918;
+  architecture comportamento of tb_somador8bits at 7( 84) + 0 on 919;

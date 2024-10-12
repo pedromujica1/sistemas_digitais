@@ -60,7 +60,7 @@ architecture comportamento of somador8bits is
         Cout_geral <= s_carry(7);
 
         --Quando foi complemento de dois é realizado o xor entre Cin e Cout
-        s_overflow2comp <= s_carry(6) xor s_carry(7); --after 4 ns;
+        s_overflow2comp <= s_carry(6) xor s_carry(7);--after 4 ns;
 
         --Caso for Soma o sinal do cout_geral é passado para o overflow
         --Caso seja Subtração o overflow é o XOR entre o Cout da ultima soma e o cout_geral

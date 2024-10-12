@@ -21,9 +21,9 @@ Mais informações podem ser encontradas no RelatorioSomadorSubtrator.pdf
  - Para testar com diferentes valores basta alterar os valores dos sinais no arquivo `tb_somador8bits.vhdl`
  - Para rodar a Simulação 01 sem latência de portas lógicas digite os comandos em abaixo no terminal
  ```
-chmod +x ./runSimulcao1.sh
+chmod +x ./runSimulacao1.sh
  ```
   ```
-./runSimulcao1.sh
+./runSimulacao1.sh
  ```
- - Para acessar Simulação 02 com latência de portas lógicas execute o arquivo `Simulacao02_tb_somador_8bits.ghw`
+ - Para acessar Simulação 02 com latência de portas lógicas execute o arquivo `Simulacao2.ghw`
