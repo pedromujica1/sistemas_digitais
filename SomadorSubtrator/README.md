@@ -27,3 +27,15 @@ chmod +x ./runSimulacao1.sh
 ./runSimulacao1.sh
  ```
  - Para acessar Simulação 02 com latência de portas lógicas execute o arquivo `Simulacao2.ghw`
+ ```
+  gtkwave Simulacao2.ghw
+
+  ```
+ - Para verificar o funcionamento do SomadorCompleto, Multiplexador e Circuito Lógico NOT os arquivos `.ghw` foram salvos no diretório  `/ghw_files`. Para testar execute os seguintes comandos no terminal
+  ```
+  cd /ghw_files
+  ``` 
+  ```
+  gtkwave <nome_arquivo>.ghw
+
+  ```
