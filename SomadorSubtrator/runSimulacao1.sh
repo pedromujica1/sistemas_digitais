@@ -23,12 +23,11 @@ ghdl -e tb_somadorCompleto
 ghdl -e tb_somador8bits
 
 #Executar a simulação e gerar o arquivo ghw
-ghdl -r tb_not8bits --stop-time=80ns --wave=tb_not8bits.ghw
-ghdl -r tb_mux2x8 --stop-time=80ns --wave=tb_not8bits.ghw
-ghdl -r tb_somadorCompleto --stop-time=80ns --wave=somadorCompleto.ghw
-ghdl -r tb_somador8bits --stop-time=80ns --wave=SIMULACAO01_tb_somador8bits.ghw
+ghdl -r tb_not8bits --stop-time=80ns --wave=ghw_files/tb_not8bits.ghw
+ghdl -r tb_mux2x8 --wave=ghw_files/tb_mux2x8.ghw
+ghdl -r tb_somadorCompleto --stop-time=80ns --wave=ghw_files/somadorCompleto.ghw
+ghdl -r tb_somador8bits --stop-time=80ns --wave=Simulacao01_tb_somador8bits.ghw
 
-#Gerar o diagrama de blocos
-gtkwave tb_somador8bits.ghw
-
+#Abrindo o arquivo pelo gtkwave
+gtkwave Simulacao01_tb_somador8bits.ghw
 

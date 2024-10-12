@@ -1,0 +1,4 @@
+v 4
+file . "tb_not8bits.vhdl" "c250f4d256beaba628181bb12d0aad1eadbf523d" "20241012172917.187":
+  entity tb_not8bits at 1( 0) + 0 on 11;
+  architecture negacao of tb_not8bits at 7( 79) + 0 on 12;
