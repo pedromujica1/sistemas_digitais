@@ -24,11 +24,11 @@ begin
     -- NAND de 3 entradas? Faça not( X and Y and Z)
     
     -- s_snk
-    s_snk <= (not(clock and k and s_eloQ))
+    s_snk <= (not(clock and k and s_eloQ));
     -- s_sns
     s_sns<= (not(pr and s_snj and s_eloR));
 
-    s_snr <= (not(cl and s_snk and s_eloS))
+    s_snr <= (not(cl and s_snk and s_eloS));
 
     --Ligação entre o elo e o sinal
     s_eloS <= s_sns;
@@ -49,9 +49,6 @@ begin
     --Interligação  entre elo e saìda
     q<= s_eloQ;
     nq <= s_elonQ;
-
-
-
     -- s_snr
     -- s_sns2
     -- s_snr2

@@ -17,6 +17,7 @@ signal sj, sk, spr, scl, sq, snq : std_logic;
 signal sclk : std_logic := '1';
 begin
 -- instancia de JK e port map
+    u_ffjk: ffjk port map(sj,sk,sclk,spr,scl,sq,snq);
 -- process
 tbp : process
 begin
@@ -26,7 +27,32 @@ begin
     sk <= '0';
     -- desativação de clear
     wait for CLK_PERIOD;
+    spr <= '1';
+    scl <= '1';
+    sj <= '0';
+    sk <= '1';
+    wait for CLK_PERIOD;
+
+    spr <= '1';
+    scl <= '0';
+    sj <= '0';
+    sk <= '0';
+    wait for CLK_PERIOD;
+
+    spr <= '1';
+    scl <= '1';
+    sj <= '0';
+    sk <= '1';
+    wait for CLK_PERIOD;
+
+    spr <= '1';
+    scl <= '1';
+    sj <= '1';
+    sk <= '1';
+    wait for CLK_PERIOD;
     -- alteração de J e K
+    
+
     end process;
     -- process para Clock
     p_clock : process
