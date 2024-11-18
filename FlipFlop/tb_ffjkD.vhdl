@@ -19,6 +19,38 @@ architecture testeClock of tb_ffjkD is
 
     begin
         u_ffjkD : ffjkD port map(sD,sclk,spr,scl,sq,snq);
-        t_ffjkD: process;
+        t_ffjkD: process
 
         begin
+            spr <= '1';
+            scl <= '0';
+            sD <= '0';
+            -- desativação de clear
+            wait for CLK_PERIOD;
+            scl <= '1';
+            sD  <= '1';
+            wait for CLK_PERIOD;
+            sD  <= '0';
+            wait for CLK_PERIOD;
+            sD  <= '1';
+            wait for CLK_PERIOD;
+            sD  <= '0';
+            wait for CLK_PERIOD;
+            sD  <= '1';
+            wait for CLK_PERIOD;
+        
+            spr <= '1';
+            scl <= '1';
+            sD <= '1';
+            wait for CLK_PERIOD;
+            -- alteração de J e K
+            
+        
+            end process;
+            -- process para Clock
+            p_clock : process
+            begin
+            sclk <= not(sclk);
+            wait for CLK_PERIOD/2;
+            end process;
+    end architecture testeClock;
