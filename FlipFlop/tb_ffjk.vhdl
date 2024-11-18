@@ -27,22 +27,21 @@ begin
     sk <= '0';
     -- desativação de clear
     wait for CLK_PERIOD;
-    spr <= '1';
     scl <= '1';
-    sj <= '0';
-    sk <= '1';
+    sj  <= '1';
+    sk  <= '0';
     wait for CLK_PERIOD;
-
-    spr <= '1';
-    scl <= '0';
-    sj <= '0';
-    sk <= '0';
+    sj  <= '1';
+    sk  <= '1';
     wait for CLK_PERIOD;
-
-    spr <= '1';
-    scl <= '1';
-    sj <= '0';
-    sk <= '1';
+    sj  <= '0';
+    sk  <= '1';
+    wait for CLK_PERIOD;
+    sj  <= '1';
+    sk  <= '1';
+    wait for CLK_PERIOD;
+    sj  <= '0';
+    sk  <= '0';
     wait for CLK_PERIOD;
 
     spr <= '1';

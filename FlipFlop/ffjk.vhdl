@@ -25,6 +25,7 @@ begin
     
     -- s_snk
     s_snk <= (not(clock and k and s_eloQ));
+    
     -- s_sns
     s_sns<= (not(pr and s_snj and s_eloR));
 

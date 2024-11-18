@@ -1,7 +1,10 @@
 v 4
-file . "ffjk_tb.vhdl" "a07848b22e12446fbbc6cfaf5c9161a7fc4e8cc0" "20241113175607.125":
-  entity tb_ffjk at 1( 0) + 0 on 21;
-  architecture test of tb_ffjk at 6( 92) + 0 on 22;
-file . "ffjk.vhdl" "85b4d6960953b0d7a6c4bfe2e1caa9223743ee24" "20241113175607.126":
-  entity ffjk at 1( 0) + 0 on 23;
-  architecture ff of ffjk at 11( 181) + 0 on 24;
+file . "ffjkD.vhdl" "f9d6f8f64e73f889c185bafb60456799731f34a8" "20241118030905.295":
+  entity ffjkd at 1( 0) + 0 on 37;
+  architecture ffd of ffjkd at 12( 186) + 0 on 38;
+file . "ffjk.vhdl" "c8bce2e942cbd2742abf1196c7ad9dbd1e16257c" "20241118021556.848":
+  entity ffjk at 1( 0) + 0 on 31;
+  architecture ff of ffjk at 11( 181) + 0 on 32;
+file . "tb_ffjk.vhdl" "42a67215e5ed6bfad2706b9740deddcaef0a3522" "20241118021555.005":
+  entity tb_ffjk at 1( 0) + 0 on 25;
+  architecture test of tb_ffjk at 6( 92) + 0 on 26;
