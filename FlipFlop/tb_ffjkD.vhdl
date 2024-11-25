@@ -14,8 +14,8 @@ architecture testeClock of tb_ffjkD is
         );
     end component;
     --Declarando sinais
-        signal sD, spr, scl, sq, snq : std_logic;
-        signal sclk : std_logic := '1';
+    signal sD, spr, scl, sq, snq : std_logic;
+    signal sclk : std_logic := '1';
 
     begin
         u_ffjkD : ffjkD port map(sD,sclk,spr,scl,sq,snq);

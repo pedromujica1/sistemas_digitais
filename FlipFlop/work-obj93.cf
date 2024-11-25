@@ -1,13 +1,19 @@
 v 4
-file . "tb_ffjkD.vhdl" "01f87543d10d8de2622dd8c2440eb8557de4100b" "20241118031856.209":
-  entity tb_ffjkd at 1( 0) + 0 on 41;
-  architecture testeclock of tb_ffjkd at 6( 75) + 0 on 42;
-file . "tb_ffjk.vhdl" "42a67215e5ed6bfad2706b9740deddcaef0a3522" "20241118021555.005":
-  entity tb_ffjk at 1( 0) + 0 on 25;
-  architecture test of tb_ffjk at 6( 92) + 0 on 26;
-file . "ffjk.vhdl" "c8bce2e942cbd2742abf1196c7ad9dbd1e16257c" "20241118031908.981":
-  entity ffjk at 1( 0) + 0 on 47;
-  architecture ff of ffjk at 11( 181) + 0 on 48;
-file . "ffjkD.vhdl" "f9d6f8f64e73f889c185bafb60456799731f34a8" "20241118031908.974":
-  entity ffjkd at 1( 0) + 0 on 45;
-  architecture ffd of ffjkd at 12( 186) + 0 on 46;
+file . "tb_ffjkT.vhdl" "47f7bfee2fd4de9158dbd05ecd1bd4cc96203688" "20241125023135.804":
+  entity tb_ffjkt at 1( 0) + 0 on 21;
+  architecture testeclock of tb_ffjkt at 6( 75) + 0 on 22;
+file . "tb_ffjk.vhdl" "42a67215e5ed6bfad2706b9740deddcaef0a3522" "20241125023135.773":
+  entity tb_ffjk at 1( 0) + 0 on 17;
+  architecture test of tb_ffjk at 6( 92) + 0 on 18;
+file . "ffjkD.vhdl" "3a614ff1939d5eb21ae63cebc77fbda6565bd636" "20241125023135.742":
+  entity ffjkd at 1( 0) + 0 on 13;
+  architecture ffd of ffjkd at 12( 186) + 0 on 14;
+file . "ffjk.vhdl" "c8bce2e942cbd2742abf1196c7ad9dbd1e16257c" "20241125023135.725":
+  entity ffjk at 1( 0) + 0 on 11;
+  architecture ff of ffjk at 11( 181) + 0 on 12;
+file . "ffjkT.vhdl" "f64392762efe28c97eda8145d9469bce190b443e" "20241125023135.757":
+  entity ffjkt at 1( 0) + 0 on 15;
+  architecture fft of ffjkt at 12( 186) + 0 on 16;
+file . "tb_ffjkD.vhdl" "3390ba16cc9ce4b489e77a700db1063684233546" "20241125023135.789":
+  entity tb_ffjkd at 1( 0) + 0 on 19;
+  architecture testeclock of tb_ffjkd at 6( 75) + 0 on 20;

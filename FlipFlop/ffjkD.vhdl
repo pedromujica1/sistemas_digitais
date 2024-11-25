@@ -10,10 +10,7 @@ port(
 );
 end ffjkD;
 architecture ffD of ffjkD is
-    --Sinais de saída
-    signal s_notD: std_logic; --Sinal para D negado
-    signal q_ffjkD : std_logic;
-    signal nq_ffjkD : std_logic;
+    
     --Componente ffjk
     component ffjk is
         port(
@@ -23,9 +20,13 @@ architecture ffD of ffjkD is
             q, nq : out std_logic
         );
     end component;
+    --Sinais de saída
+    signal s_notd: std_logic; --Sinal para D negado
+    signal q_ffjkD : std_logic;
+    signal nq_ffjkD : std_logic;
     
     begin
-        s_notD <= not d;
+        s_notd <= not d;
         u_ffjkD : ffjk port map(d,s_notD,clockD,prD,clD,q_ffjkD,nq_ffjkD);
         qD <= q_ffjkD;
         nqD <= nq_ffjkD;

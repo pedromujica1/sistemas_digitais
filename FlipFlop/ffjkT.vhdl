@@ -25,8 +25,8 @@ architecture ffT of ffjkT is
     end component;
     
     begin
-        s_notD <= not d;
-        u_ffjkD : ffjk port map(t,t,clockT,prT,clT,q_ffjkT,nq_ffjkT);
+        s_T <= t;
+        u_ffjkD : ffjk port map(s_T,s_T,clockT,prT,clT,q_ffjkT,nq_ffjkT);
         qT <= q_ffjkT;
         nqT <= nq_ffjkT;
     end architecture;
