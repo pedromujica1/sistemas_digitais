@@ -1,0 +1,22 @@
+v 4
+file . "tb_regcarga.vhdl" "02eef47e4fdf5e240597424bd5cc94f576a77e0e" "20241204140340.177":
+  entity tb_regcarga at 1( 0) + 0 on 51;
+  architecture teste of tb_regcarga at 7( 80) + 0 on 52;
+file . "tb_regcarga8bits.vhdl" "1bcc17a8df49fdb093dd7920c6cc69999bd9eda9" "20241204140340.176":
+  entity tb_regcarga8bits at 1( 0) + 0 on 49;
+  architecture reg8bits of tb_regcarga8bits at 7( 85) + 0 on 50;
+file . "regcarga.vhdl" "c2667a5e2f983bfde9db5b8903eab66473124253" "20241204140340.175":
+  entity regcarga at 1( 0) + 0 on 47;
+  architecture reg1bit of regcarga at 14( 204) + 0 on 48;
+file . "regcarga8bits.vhdl" "8400a8ac7852dad030b604da36e5c3f149b175fe" "20241204140340.174":
+  entity regcarga8bits at 1( 0) + 0 on 45;
+  architecture reg8bits of regcarga8bits at 15( 286) + 0 on 46;
+file . "mux2x1.vhdl" "bce8610ed8dc6fe6318796ab4b7cd019449d0501" "20241204140340.173":
+  entity mux2x1 at 1( 0) + 0 on 43;
+  architecture comutacao of mux2x1 at 14( 249) + 0 on 44;
+file . "ffjk.vhdl" "c8bce2e942cbd2742abf1196c7ad9dbd1e16257c" "20241204140340.172":
+  entity ffjk at 1( 0) + 0 on 41;
+  architecture ff of ffjk at 11( 181) + 0 on 42;
+file . "ffjkD.vhdl" "3a614ff1939d5eb21ae63cebc77fbda6565bd636" "20241204140340.171":
+  entity ffjkd at 1( 0) + 0 on 39;
+  architecture ffd of ffjkd at 12( 186) + 0 on 40;
