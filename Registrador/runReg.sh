@@ -3,7 +3,7 @@
 #Combilar arquivos 
 ghdl -a *.vhdl
 
-ghdl -a tb_regcarga .vhdl
+ghdl -a tb_regcarga.vhdl
 ghdl -a tb_regcarga8bits.vhdl
 #ghdl -a ffjk_tb8bits.vhdl
 

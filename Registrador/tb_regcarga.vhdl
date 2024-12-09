@@ -23,8 +23,8 @@ architecture teste of tb_regcarga is
            begin
 --caso 0
                 s_nrw <= '0';
-                s_pr <= '0';
-                s_cl <= '1';
+                s_pr <= '1';
+                s_cl <= '0';
                 s_d  <= '0';
 wait for CLK_PERIOD;
 --caso 1
@@ -35,10 +35,14 @@ wait for CLK_PERIOD;
 wait for CLK_PERIOD;
 --caso 2
                 s_nrw <= '0';
-                s_pr <= '1';
-                s_cl <= '1';
                 s_d  <= '1';
 wait for CLK_PERIOD;
+--caso 3
+s_d <= '0';
+wait for CLK_PERIOD;
+--caso 4
+s_d <= '1';
+s_nrw <= '1';
         end process;
 
 p_clock_n : process
