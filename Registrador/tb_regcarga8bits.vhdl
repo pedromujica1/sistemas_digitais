@@ -23,24 +23,38 @@ architecture reg8bits of tb_regcarga8bits is
     u_regc : regcarga8bits port map(s_d,s_clk,s_pr,s_cl,s_nrw,s_s);
     u_tb : process
            begin
---caso 0
+                --caso 0
                 s_nrw <= '0';
-                s_pr <= '0';
-                s_cl <= '1';
+                s_pr <= '1';
+                s_cl <= '0';
                 s_d  <= "00000000";
-wait for CLK_PERIOD;
---caso 1
+                wait for CLK_PERIOD;
+                --caso 1 (Grava número 15)
+                                s_nrw <= '1';
+                                s_cl <= '1';
+                                s_d <=  "00001111" ;
+                wait for CLK_PERIOD;
+                --caso 2 (Grava numero 240)
+                                s_d  <= "11110000";
+                wait for CLK_PERIOD;
+                --caso 3 (sem gravação)
+                s_nrw <= '0';  
+                wait for CLK_PERIOD;
+                --caso 4 (grava numero 255)
                 s_nrw <= '1';
-                s_pr <= '1';
-                s_cl <= '1';
-                s_d <=  "00001111" ;
-wait for CLK_PERIOD;
---caso 2
+                s_d <= "11111111";
+                wait for CLK_PERIOD;
+                -- Sem gravação por 1 ciclo
                 s_nrw <= '0';
-                s_pr <= '1';
-                s_cl <= '1';
-                s_d  <= "11111111";
-wait for CLK_PERIOD;
+                wait for CLK_PERIOD;
+                --caso 6 grava número 0
+                s_nrw <= '1';
+                s_d <= "00000000";
+                wait for CLK_PERIOD;
+                --sem gravação
+                s_nrw <= '0';
+                wait for CLK_PERIOD;
+                wait;
         end process;
 
 p_clock_n : process
