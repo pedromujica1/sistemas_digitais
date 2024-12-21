@@ -3,9 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity contador is
     port(
-        clk: in std_logic;
-        reset: in std_logic;
-        pr: in std_logic;
+        clk, reset, pr: in std_logic;        
         q_cont : out std_logic_vector(2 downto 0);
 
     );
