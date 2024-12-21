@@ -1,0 +1,13 @@
+v 4
+file . "tb_contador.vhdl" "9c8bf2a4b8c73196a92cf2f667f2c01e2785d5cb" "20241221205755.975":
+  entity tb_contador at 1( 0) + 0 on 17;
+  architecture contar of tb_contador at 7( 79) + 0 on 18;
+file . "ffjk.vhdl" "3c00a7c6dc9bc2a2a7f471c3da2098bda220e939" "20241221205755.975":
+  entity ffjk at 1( 0) + 0 on 15;
+  architecture ff of ffjk at 11( 181) + 0 on 16;
+file . "controler.vhdl" "cdafc437681198f2c9d96597c996a862f1a475f2" "20241221205755.974":
+  entity controler at 1( 0) + 0 on 13;
+  architecture controlar of controler at 12( 197) + 0 on 14;
+file . "contador.vhdl" "6df6e99655ef3ab663985f4fa299ac818740db8e" "20241221205755.973":
+  entity contador at 1( 0) + 0 on 11;
+  architecture contar of contador at 12( 207) + 0 on 12;
