@@ -31,7 +31,7 @@ architecture contar of tb_contador is
             sreset <= '0';
             wait for CLK_PERIOD; 
             sreset <= '1';
-            wait for 10*CLK_PERIOD;
+            wait for CLK_PERIOD;
             wait; -- Finaliza o processo
         
         end process;
