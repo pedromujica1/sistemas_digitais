@@ -3,12 +3,9 @@ ghdl -a *.vhdl
 
 ghdl -a tb_contador.vhdl
 
-#ghdl -a ffjk_tb8bits.vhdl
+#Gerar entidade testebench
+#ghdl -e tb_contador
 
-# Elaborar o testbench
-ghdl -e tb_regcarga       #Nome da entidade do testbench
-ghdl -e tb_regcarga8bits
 
 #Executar a simulação e gerar o arquivo ghw
-ghdl -r tb_regcarga --stop-time=140ns --wave=tb_regcarga.ghw
-ghdl -r tb_regcarga8bits --stop-time=140ns --wave=tb_regcarga8bits.ghw
+ghdl -r tb_contador --stop-time=140ns --wave=tb_contador.ghw
