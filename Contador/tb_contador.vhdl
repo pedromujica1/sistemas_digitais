@@ -16,14 +16,14 @@ architecture contar of tb_contador is
     
         );
     end component;
-
+        signal spr, sreset : std_logic;
+        signal sclk : std_logic := '1';
+        signal s_qcont : std_logic_vector (2 downto 0);
 
     
     begin
         
-        signal spr, sreset : std_logic;
-        signal sclk : std_logic := '1';
-        signal s_qcont : std_logic_vector (2 downto 0);
+        
         contador_u: contador port map (sclk, sreset, spr, s_qcont); 
         u_contador: process 
         begin
