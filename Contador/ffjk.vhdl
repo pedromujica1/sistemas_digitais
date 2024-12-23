@@ -16,23 +16,23 @@ architecture ff of ffjk is
     signal s_eloQ, s_elonQ: std_logic;
     signal s_nClock : std_logic;
 begin
+
     s_nClock <= not(clock);
-
-    s_snj <= not(j and clock and s_elonQ);
-    s_snk <= not(k and clock and s_eloQ);
-
-    s_sns <= not(pr and s_snj and s_eloR);
-    s_snr <= not(cl and s_snk and s_eloS);
-
-    s_sns2 <= s_nClock nand s_sns;
-    s_snr2 <= s_nClock nand s_snr;
-
-    s_eloS <= s_sns;
-    s_eloR <= s_snr;
-    s_eloQ <= not(pr and s_sns2 and s_elonQ);
-    s_elonQ <= not(cl and s_snr2 and s_eloQ);
+    s_snj    <= (not(j  and clock and s_elonQ));
+    s_snk    <= (not(k  and clock and s_eloQ));
     
-    q <= s_eloQ;
-    nq <= s_elonQ;
+    s_eloS   <= (not(pr and s_snj and s_eloR));
+    s_eloR   <= (not(cl and s_snk and s_eloS));
+    
+    s_sns    <= s_eloS;
+    s_snr    <= s_eloR;
+    s_sns2   <= ((not(clock)) nand (s_sns));
+    s_snr2   <= (not(clock) nand s_snr);
+    
+    s_eloQ   <= not(s_sns2 and pr and s_elonQ);
+    s_elonQ  <= not(s_snr2 and s_eloQ and cl);
+    
+    q        <= s_eloQ;
+    nq       <= s_elonQ;
     
 end architecture ff;
