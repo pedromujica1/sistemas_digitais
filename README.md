@@ -1,2 +1,2 @@
 # sistemas_digitais
-Aulas práticas de SD usando VHDL
+Simução de Sistemas Digitais usando a linguagem VHDL (VHSIC Hardware Description Language)
